@@ -1,0 +1,42 @@
+.flex {
+	display: flex;
+	width: 100%;
+}
+
+.flex-v-center {
+	align-items: center;
+}
+
+.flex-h-between {
+	justify-content: space-between;
+}
+
+.hidden-desk {
+	@media (min-width: $desk-w) {
+		display: none;
+	}
+}
+
+.hidden-tablet {
+	@media (min-width: $tablet-w) {
+		display: none;
+	}
+}
+
+.visible-tablet {
+	display: none;
+	@media (min-width: $tablet-w) {
+		display: block !important;
+	}
+}
+
+.visible-desk {
+	display: none;
+	@media (min-width: $desk-w) {
+		display: block !important;
+	}
+}
+
+.overflow-container {
+	overflow-x: auto;
+}

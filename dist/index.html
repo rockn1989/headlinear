@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Главная</title>
+  <link rel="stylesheet" href="libs/slick/slick.css">
+  <link rel="stylesheet" href="libs/slick/slick-theme.css">
+  <link rel="stylesheet" href="libs/select2/select2.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <style>
+    .preloader-layout.super-hidden {
+      display: none;
+      z-index: -1;
+    }
+
+    .preloader-layout {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: #4a439d;
+      z-index: 9999;
+      transition: opacity 0.4s ease;
+    }
+
+    .preloader-layout.hidden {
+      opacity: 0;
+      z-index: -1;
+    }
+
+    .lines-loader {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      display: block;
+    }
+
+    .grey-line {
+      width: 100%;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .yellow-line {
+      position: absolute;
+      right: 0;
+      width: 0;
+      bottom: 50%;
+      line-height: 0;
+      border-bottom: 2px solid #F0C630;
+      transition: width 0.6s ease;
+
+    }
+
+    .yellow-line img {
+      transition: opacity 0.3s ease;
+    }
+
+    .yellow-line img.hide {
+      opacity: 0;
+    }
+
+    .percent {
+      position: absolute;
+      left: 50%;
+      bottom: 5%;
+      transform: translateX(-50%);
+      font-size: 56px;
+      line-height: 56px;
+      color: #ffffff;
+    }
+  </style>
+
+  <div class="preloader-layout">
+    <div class="lines-loader">
+      <div class="grey-line"></div>
+      <div class="yellow-line">
+        <img src="img/icon-svg/logo.svg" alt="">
+      </div>
+    </div>
+
+    <div class="percent">0</div>
+
+  </div>
+
+  <header class="header">
+    <div class="container container--lg">
+      <div class="flex flex-v-center">
+        <a href="/" class="logo">
+          <img src="img/icon-svg/logo.svg" alt="Headliner" title="Headliners">
+        </a>
+        <nav class="main-nav visible-tablet">
+          <ul>
+            <li><a href="#desc">Описание</a></li>
+            <li><a href="#location">Локация</a></li>
+            <li><a href="#see">Смотрите также</a></li>
+            <li><a href="#reg">Запись на просмотр</a></li>
+          </ul>
+        </nav>
+
+        <a href="" class="menu-btn hidden-tablet">
+          <svg width="32px" height="32px" class="icon-btn">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite.svg#mobile-menu"></use>
+          </svg>
+          <svg width="12px" height="12px" class="icon-close">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite.svg#close"></use>
+          </svg>
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <div class="page-wrapper">
+    <main class="main">
+      <section class="top-banner">
+        <div class="container">
+          <div class="top-banner__desc">
+            <h1>Многофункциональный жилой квартал HEADLINER</h1>
+            <div class="xs-title">Сдача — 4 кв. 2022, есть сданные</div>
+          </div>
+
+          <div class="slider">
+            <div class="slide">
+              <picture>
+                <source srcset="img/slider/slide-1.png" media="(min-width: 960px)" type="image/png">
+                <source srcset="img/slider/slide-1-t.png" media="(min-width: 768px)" type="image/png">
+                <source srcset="img/slider/slide-1-m.png" media="(min-width: 320px)" type="image/png">
+                <img src="img/slider/slide-1.png" alt="slide">
+              </picture>
+            </div>
+            <div class="slide">
+              <picture>
+                <img src="img/slider/slide-2.png" alt="slide">
+              </picture>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+      <main>
+        <section id="desc" class="tabs-section">
+          <div class="container">
+            <div class="overflow-container">
+              <ul class="tab">
+                <li class="active">
+                  <a href="#">Плюсы и минусы</a>
+                </li>
+
+                <li>
+                  <a href="#">Аэротур</a>
+                </li>
+
+                <li>
+                  <a href="#">Планировки</a>
+                </li>
+
+                <li>
+                  <a href="#">Планировки</a>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="tab-content">
+              <li class="active">
+                <div class="flex-row">
+                  <div class="col-12-12-xs col-6-12-l">
+                    <ul class="mark-list mark-list--plus">
+                      <li>Привлекательная архитектура</li>
+                      <li>Большой выбор квартир</li>
+                      <li>Поразительные виды из окон</li>
+                      <li>Сложившийся район со всем необходимым</li>
+                      <li>Сравнительно низкие цены</li>
+                    </ul>
+
+                  </div>
+                  <div class="col-12-12-xs col-6-12-l">
+                    <ul class="mark-list mark-list--minus">
+                      <li>Недостаток собственной инфраструктуры</li>
+                      <li>Частые пробки вокруг</li>
+                      <li>Не лучшая экология</li>
+                    </ul>
+
+                  </div>
+                </div>
+              </li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, nesciunt. Ipsa, ab. Eligendi cupiditate assumenda nulla repellat obcaecati accusamus quibusdam adipisci optio neque delectus! Esse nemo ipsa amet autem inventore.</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit officiis delectus fugiat laudantium? Dicta assumenda sequi, nihil repudiandae minus laboriosam.l</li>
+              <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, architecto.</li>
+            </ul>
+
+
+          </div>
+        </section>
+        <section class="promo-section">
+          <div class="container">
+            <div class="flex-row flex-v-center">
+
+              <div class="col-12-12-xs col-6-12-l">
+                <div class="title-h3">Запишитесь на просмотр и оцените всё сами!</div>
+              </div>
+              <div class="col-12-12-xs col-6-12-l">
+                <div class="promo-section__btn">
+                  <a href="#reg" class="btn">Запись на просмотр</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="map-section">
+          <div class="container">
+            <div id="location" class="title-h3">Локация</div>
+
+            <div class="map">
+              <div class="map__address xs-title">Москва, ЦАО, Пресненский, Шмитовский проезд, вл. 39</div>
+              <div class="map__metro-info">
+
+                <div class="metro-target">
+                  <div class="metro-target__name">Шелепиха</div>
+                  <div class="metro-target__distance">5 мин пешком</div>
+                </div>
+                <div class="metro-target">
+                  <div class="metro-target__name">Фили</div>
+                  <div class="metro-target__distance">6 мин на транспорте</div>
+                </div>
+              </div>
+
+              <div class="map__box">
+                <div class="map__box-canvas">
+                  <img src="img/media/map.png" alt="карта">
+                </div>
+                <div class="map__box-btn">
+                  <a href="#map-modal" class="modal-btn">
+                    <i class="icon-chevron"></i>
+                    Объекты инфраструктуры
+                  </a>
+                </div>
+                <div id="map-modal" class="map-modal">
+
+                  <label for="school" class="custom-label-checkbox">
+                    <input type="checkbox" id="school" checked>
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Школы</span>
+                  </label>
+                  <label for="apteki" class="custom-label-checkbox">
+                    <input type="checkbox" id="apteki" checked>
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Аптеки</span>
+                  </label>
+
+                  <label for="institut" class="custom-label-checkbox">
+                    <input type="checkbox" id="institut" checked>
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Высшие учебные заведения</span>
+                  </label>
+
+                  <label for="amb" class="custom-label-checkbox">
+                    <input type="checkbox" id="amb" checked>
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Больницы</span>
+                  </label>
+
+                  <label for="shop" class="custom-label-checkbox">
+                    <input type="checkbox" id="shop" checked>
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Магазины</span>
+                  </label>
+
+                  <label for="fitnes" class="custom-label-checkbox">
+                    <input type="checkbox" id="fitnes" checked>
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Фитнес</span>
+                  </label>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+        <section class="house-cards-section">
+          <div class="container">
+            <div id="see" class="title-h3">Смотрите также</div>
+            <div class="cards-list">
+              <div class="flex-row">
+                <div class="col-12-12 col-6-12-s col-6-12-m col-3-12-l">
+                  <div class="card-item">
+                    <div class="card-item__top">
+                      <div class="card-item__img">
+                        <img src="img/media/house-1.png" alt="" loading="lazy">
+
+                      </div>
+                      <div class="card-item__stocks">
+                        <div class="stock-item">
+                          <div class="stock-item__img">
+                            <svg width="32px" height="32px" class="icon-rocket">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite.svg#rocket"></use>
+                            </svg>
+                          </div>
+                          <div class="stock-item__text">Lorem, ipsum.</div>
+                        </div>
+                        <div class="stock-item">
+                          <div class="stock-item__img">
+                            <svg width="32px" height="32px" class="icon-crown">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite.svg#crown"></use>
+                            </svg>
+                          </div>
+                          <div class="stock-item__text">Lorem, ipsum.</div>
+                        </div>
+
+                      </div>
+                      <div class="card-item__contacts">
+                        <div class="card-item__price">8 217 030 - 29 070 951₽</div>
+                        <div class="card-item__count">569 квартир в продаже</div>
+                      </div>
+                    </div>
+
+                    <div class="card-item__name">
+                      <a href="">ЖК «Level Стрешнево» (Левел Стрешнево)</a>
+                    </div>
+                    <div class="card-item__address">
+                      <div class="address__city">Москва, СВАО</div>
+                      <div class="address__metro">
+                        <div class="metro__name">Алексеевская</div>
+                        <div class="metro__distance">5 мин</div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="col-12-12 col-6-12-s col-6-12-m col-3-12-l">
+                  <div class="card-item">
+                    <div class="card-item__top">
+                      <div class="card-item__img">
+                        <img src="img/media/house-2.png" alt="" loading="lazy">
+
+                      </div>
+                      <div class="card-item__stocks">
+                        <div class="stock-item">
+                          <div class="stock-item__img">
+                            <svg width="32px" height="32px" class="icon-procent">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-svg/sprite/sprite.svg#procent"></use>
+                            </svg>
+                          </div>
+                          <div class="stock-item__text">Действует скидка</div>
+                        </div>
+
+                      </div>
+                      <div class="card-item__contacts">
+                        <div class="card-item__price">8 217 030 - 29 070 951₽</div>
+                        <div class="card-item__count">569 квартир в продаже</div>
+                      </div>
+                    </div>
+
+                    <div class="card-item__name">
+                      <a href="">ЖК «Новое Медведково»</a>
+                    </div>
+                    <div class="card-item__address">
+                      <div class="address__city">Москва, СВАО</div>
+                      <div class="address__metro">
+                        <div class="metro__name">Алексеевская</div>
+                        <div class="metro__distance">5 мин</div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="col-12-12 col-6-12-s col-6-12-m col-3-12-l">
+                  <div class="card-item">
+                    <div class="card-item__top">
+                      <div class="card-item__img">
+                        <img src="img/media/house-1.png" alt="" loading="lazy">
+
+                      </div>
+                      <div class="card-item__stocks"></div>
+                      <div class="card-item__contacts">
+                        <div class="card-item__price">8 217 030 - 29 070 951₽</div>
+                        <div class="card-item__count">569 квартир в продаже</div>
+                      </div>
+                    </div>
+
+                    <div class="card-item__name">
+                      <a href="">ЖК «Люберецкий»</a>
+                    </div>
+                    <div class="card-item__address">
+                      <div class="address__city">Москва, СВАО</div>
+                      <div class="address__metro">
+                        <div class="metro__name">Алексеевская</div>
+                        <div class="metro__distance">5 мин</div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="col-12-12 col-6-12-s col-6-12-m col-3-12-l">
+                  <div class="card-item">
+                    <div class="card-item__top">
+                      <div class="card-item__img">
+                        <img src="img/media/house-4.png" alt="" loading="lazy">
+
+                      </div>
+                      <div class="card-item__stocks"></div>
+                      <div class="card-item__contacts">
+                        <div class="card-item__price">8 217 030 - 29 070 951₽</div>
+                        <div class="card-item__count">569 квартир в продаже</div>
+                      </div>
+                    </div>
+
+                    <div class="card-item__name">
+                      <a href="">ЖК «Люберецкий»</a>
+                    </div>
+                    <div class="card-item__address">
+                      <div class="address__city">Москва, СВАО</div>
+                      <div class="address__metro">
+                        <div class="metro__name">Алексеевская</div>
+                        <div class="metro__distance">5 мин</div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subscribe-form-section">
+          <div class="container">
+            <div class="flex-row">
+              <div class="col-12-12-xs col-6-12-l">
+                <div id="reg" class="title-h2">Запишитесь на просмотр и оцените всё сами!</div>
+                <form action="" class="default-form" autocomplete="off">
+                  <fieldset>
+                    <div class="flex-row">
+                      <div class="col-12-12">
+                        <input name="userName" type="text" placeholder="Как вас зовут?" required>
+
+                      </div>
+                      <div class="col-6-12">
+                        <div class="custom-select">
+                          <select data-placeholder="16 сентября" name="date" id="date" class="js__custom-select">
+                            <option value=""></option>
+                            <option value="1">1</option>
+                            сентября</option>
+                            <option value="2">2</option>
+                            сентября</option>
+                            <option value="3">3</option>
+                            сентября</option>
+                            <option value="4">4</option>
+                            сентября</option>
+                            <option value="5">5</option>
+                            сентября</option>
+                            <option value="6">6</option>
+                            сентября</option>
+                            <option value="7">7</option>
+                            сентября</option>
+                            <option value="8">8</option>
+                            сентября</option>
+                            <option value="9">9</option>
+                            сентября</option>
+                            <option value="10">10</option>
+                            сентября</option>
+                            <option value="11">11</option>
+                            сентября</option>
+                            <option value="12">12</option>
+                            сентября</option>
+                            <option value="13">13</option>
+                            сентября</option>
+                            <option value="14">14</option>
+                            сентября</option>
+                            <option value="15">15</option>
+                            сентября</option>
+                            <option value="16">16</option>
+                            сентября</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-6-12">
+                        <div class="custom-select">
+                          <select data-placeholder="14:00" name="time" id="time" class="js__custom-select">
+                            <option value=""></option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="13:00">13:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="18:00">18:00</option>
+                            <option value="19:00">19:00</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-12-12">
+                        <input name="tel" type="text" placeholder="Ваш телефон" class="js__mask-input" required>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <label for="check-time" class="custom-label-checkbox">
+                    <input type="checkbox" id="check-time" checked>
+                    <span class="custom-checkbox"></span>
+                    <span class="custom-label">Напомните мне за 2 часа до визита</span>
+                  </label>
+                  <button type="submit" class="btn btn--white" disabled>Отправить</button>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </main>
+
+    </main>
+
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="flex-row">
+        <div class="col-12-12-xs col-6-12-m col-3-12-l">
+
+          <div class="footer__title js__toggle-menu">Новостройки
+
+            <i class="icon-chevron"></i>
+          </div>
+          <ul class="menu-list">
+            <li>
+              <a href="" class="href">Квартиры в Москве</a>
+            </li>
+            <li>
+              <a href="">Квартиры в Новой Москве</a>
+            </li>
+            <li>
+              <a href="">Квартиры в Подмосковье</a>
+            </li>
+
+            <li>
+              <a href="">В Москве</a>
+            </li>
+
+            <li>
+              <a href="">В Подмосковье</a>
+            </li>
+
+            <li>
+              <a href="">В Новой Москве</a>
+            </li>
+
+
+          </ul>
+        </div>
+        <div class="col-12-12-xs col-6-12-m col-3-12-l">
+          <div class="footer__title js__toggle-menu">Популряное
+
+            <i class="icon-chevron"></i>
+          </div>
+          <ul class="menu-list">
+            <li>
+              <a href="" class="href">В рассрочку</a>
+            </li>
+            <li>
+              <a href="">Военная ипотека</a>
+            </li>
+            <li>
+              <a href="">До 4 млн</a>
+            </li>
+
+            <li>
+              <a href="">До 6 млн</a>
+            </li>
+
+            <li>
+              <a href="">Внутри МКАД</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-12-12-xs col-6-12-m col-3-12-l">
+          <div class="footer__title">Рекламный отдел
+          </div>
+          <div class="footer__contacts">
+            <a href="tel:+74959874247">+7 (495) 987-42-47 доб. 501
+            </a>
+            <a href="mailto:kp@novostroy-m.ru">kp@novostroy-m.ru</a>
+          </div>
+        </div>
+
+        <div class="col-12-12-xs col-6-12-m col-3-12-l">
+          <div class="footer__title">
+            <div class="copyright">© 2011—2020 Новострой-М</div>
+            Всё, что нужно знать о новостройках
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="libs/jquery.min.js" defer></script>
+  <script src="libs/slick/slick.min.js" defer></script>
+  <script src="libs/select2/select2.min.js" defer></script>
+  <script src="libs/jquery-mask/jquery.maskedinput.min.js" defer></script>
+  <script src="libs/jquery.validate.min.js" defer></script>
+  <script src="js/app.js" defer></script>
+
+
+</body>
+
+</html>

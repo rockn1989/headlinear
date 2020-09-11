@@ -1,0 +1,74 @@
+<style>
+
+	.preloader-layout.super-hidden {
+		display: none;
+		z-index: -1;
+	}
+
+	.preloader-layout {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background-color: #4a439d;
+		z-index: 9999;
+		transition: opacity 0.4s ease;
+	}
+	.preloader-layout.hidden {
+		opacity: 0;
+		z-index: -1;
+	}
+
+	.lines-loader {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		display: block;
+	}
+
+	.grey-line {
+		width: 100%;
+		height: 1px;
+		background-color: rgba(255, 255, 255, 0.3);
+	}
+
+	.yellow-line {
+		position: absolute;
+		right: 0;
+		width: 0;
+		bottom: 50%;
+		line-height: 0;
+		border-bottom: 2px solid #F0C630;
+		transition: width 0.6s ease;
+
+	}
+
+	.yellow-line img {
+		transition: opacity 0.3s ease;
+	}
+
+	.yellow-line img.hide {
+		opacity: 0;
+	}
+	.percent {
+		position: absolute;
+		left: 50%;
+		bottom: 5%;
+		transform: translateX(-50%);
+		font-size: 56px;
+		line-height: 56px;
+		color: #ffffff;
+	}
+</style>
+
+<div class="preloader-layout">
+	<div class="lines-loader">
+		<div class="grey-line"></div>
+		<div class="yellow-line">
+			<img src="img/icon-svg/logo.svg" alt="">
+		</div>
+	</div>
+
+	<div class="percent">0</div>
+
+</div>

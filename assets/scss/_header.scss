@@ -1,0 +1,156 @@
+header.header {
+	position: relative;
+	padding-top: 7px;
+
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+	@media (min-width: $mob-xs) {
+		padding: 4px 0;
+		background-color: $purple;
+		z-index: 101;
+	}
+	@media (min-width: $tablet-w) {
+		background-color: transparent;
+		z-index: 100;
+	}
+}
+
+.logo {
+	display: inline-flex;
+	align-items: center;
+	img {
+		@media (min-width: $mob-xs) {
+			max-width: 32px;
+		}
+		@media (min-width: $tablet-w) {
+			max-width: 64px;
+		}
+	}
+}
+
+.main-nav {
+	@media (min-width: $mob-xs) {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		max-width: 1180px;
+		padding: 0 20px;
+		background-color: $darkPurple;
+		z-index: 999;
+	}
+	@media (min-width: $tablet-w) {
+		position: static;
+		margin-left: auto;
+		padding: 0;
+		width: auto;
+		max-width: none;
+		background-color: transparent;
+	}
+	ul {
+		@include list-reset;
+		font-size: 0;
+		line-height: 0;
+		@media (min-width: $mob-xs) {
+			padding: 32px 0;
+			display: flex;
+			flex-direction: column;
+		}
+		@media (min-width: $tablet-w) {
+			padding: 0;
+			display: block;
+		}
+		li {
+			display: inline-block;
+			vertical-align: top;
+			@media (min-width: $mob-xs) {
+				margin-bottom: 16px;
+			}
+			@media (min-width: $tablet-w) {
+				margin-left: 40px;
+				margin-bottom: 0;
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+			a {
+				position: relative;
+				display: inline-flex;
+				align-items: center;
+				color: $white;
+				@include text-size(16px, 16px);
+				&:after {
+					content: "";
+					position: absolute;
+					left: 0;
+					bottom: -4px;
+					width: 100%;
+					height: 2px;
+					background-color: $yellow;
+					transform: scale(0);
+					transition: transform 0.3s ease-in-out;
+				}
+				&:hover {
+					&:after {
+						transform: scale(1);
+					}
+				}
+				@media (min-width: $mob-xs) {
+					padding-bottom: 8px;
+				}
+				@media (min-width: $tablet-w) {
+					padding-bottom: 0;
+					height: 71px;
+				}
+			}
+		}
+	}
+}
+
+.menu-btn {
+	position: relative;
+	margin-left: auto;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	background-color: transparent;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	overflow: hidden;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 100%;
+		background-color: $yellow;
+		transition: width 0.55s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		z-index: 50;
+	}
+	svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.icon-close {
+		opacity: 0;
+		z-index: 51;
+		transition: opacity 0.2s ease;
+	}
+	.icon-menu {
+		z-index: 49;
+	}
+	&.active {
+		&:before {
+			width: 100%;
+		}
+		.icon-close {
+			opacity: 1;
+		}
+	}
+}

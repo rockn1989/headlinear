@@ -1,0 +1,37 @@
+html,
+body {
+	@include text-size(16px, 24px);
+	font-family: $mainFont;
+	color: $black;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 20px;
+	max-width: $containerWidth;
+	&--lg {
+		max-width: $containerWidthLg;
+	}
+}
+
+header,
+footer {
+	flex: none;
+}
+
+.page-wrapper {
+	flex: 1 0 auto;
+	min-height: 100vh;
+}

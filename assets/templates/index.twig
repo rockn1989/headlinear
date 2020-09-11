@@ -1,0 +1,16 @@
+{% extends "layouts/default.twig" %}
+{% set title="Главная" %}
+
+{% block content %}
+
+	{% include "includes/components/top-banner.twig" %}
+	<main>
+		{% include "includes/components/tabs.twig" %}
+		{% include "includes/components/promo.twig" %}
+		{% include "includes/components/map.twig" %}
+		{% include "includes/components/house-cards.twig" %}
+
+		{% include "includes/components/subscribe-form.twig" %}
+
+	</main>
+{% endblock %}

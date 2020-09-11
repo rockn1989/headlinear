@@ -1,0 +1,49 @@
+<section class="subscribe-form-section">
+	<div class="container">
+		<div class="flex-row">
+			<div class="col-12-12-xs col-6-12-l">
+				<div id="reg" class="title-h2">Запишитесь на просмотр и оцените всё сами!</div>
+				<form action="" class="default-form" autocomplete="off">
+					<fieldset>
+						<div class="flex-row">
+							<div class="col-12-12">
+								<input name="userName" type="text" placeholder="Как вас зовут?" required>
+
+							</div>
+							<div class="col-6-12">
+								<div class="custom-select">
+									<select data-placeholder="16 сентября" name="date" id="date" class="js__custom-select">
+										<option value=""></option>
+										{% for item in 1..16 %}
+											<option value="{{item}}">{{item}}</option>
+											сентября</option>
+									{% endfor %}
+								</select>
+							</div>
+						</div>
+						<div class="col-6-12">
+							<div class="custom-select">
+								<select data-placeholder="14:00" name="time" id="time" class="js__custom-select">
+									<option value=""></option>
+									{% for item2 in 1..9 %}
+										<option value="1{{item2}}:00">1{{item2}}:00</option>
+									{% endfor %}
+								</select>
+							</div>
+						</div>
+						<div class="col-12-12">
+							<input name="tel" type="text" placeholder="Ваш телефон" class="js__mask-input" required>
+						</div>
+					</div>
+				</fieldset>
+				<label for="check-time" class="custom-label-checkbox">
+					<input type="checkbox" id="check-time" checked>
+					<span class="custom-checkbox"></span>
+					<span class="custom-label">Напомните мне за 2 часа до визита</span>
+				</label>
+				<button type="submit" class="btn btn--white" disabled>Отправить</button>
+			</form>
+		</div>
+	</div>
+
+</div></section>

@@ -1,0 +1,110 @@
+.top-banner {
+	position: relative;
+	color: $white;
+	background: $purple;
+	@media (min-width: $mob-xs) {
+		min-height: 308px;
+	}
+	@media (min-width: $tablet-w) {
+		height: 604px;
+	}
+	@media (min-width: $desk-w) {
+		height: 636px;
+	}
+	&__desc {
+		position: relative;
+		z-index: 100;
+		@media (min-width: $tablet-w) {
+			max-width: 75%;
+		}
+	}
+	@media (min-width: $mob-xs) {
+		padding-top: 48px;
+		padding-bottom: 25px;
+	}
+	@media (min-width: $tablet-w) {
+		padding-top: 220px;
+		margin-top: -80px;
+	}
+	@media (min-width: $desk-w) {
+		padding-top: 210px;
+		padding-bottom: 48px;
+	}
+
+	.slider {
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin-bottom: 0;
+		max-width: 991px;
+		z-index: 95;
+		@media (min-width: $mob-xs) {
+			max-width: 204px;
+		}
+		@media (min-width: $tablet-w) {
+			max-width: 570px;
+		}
+		@media (min-width: $desk-w) {
+			max-width: 991px;
+		}
+		.slide {
+			//height: 100%;
+		}
+		img {
+			margin-left: auto;
+			/* 			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			max-height: 100%; */
+		}
+	}
+}
+
+.house-cards-section {
+	padding: 56px 0 32px;
+}
+
+.promo-section {
+	padding: 56px 0;
+	background: $purple;
+	.title-h3 {
+		color: $white;
+		@media (min-width: $desk-w) {
+			margin-bottom: 0;
+		}
+	}
+	&__btn {
+		@media (min-width: $desk-w) {
+			text-align: right;
+		}
+	}
+	.btn {
+		@media (min-width: $mob-xs) {
+			font-size: 16px;
+			width: 100%;
+			max-width: 270px;
+			text-align: center;
+		}
+	}
+}
+
+.tabs-section {
+	padding: 56px 0 31px;
+}
+
+.map-section {
+	padding: 56px 0 0;
+}
+
+.subscribe-form-section {
+	padding: 56px 0;
+	background: $purple;
+	.title-h2 {
+		margin-bottom: 32px;
+		color: $white;
+	}
+
+	label.custom-label-checkbox {
+		margin-bottom: 24px;
+	}
+}
