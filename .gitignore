@@ -10,4 +10,5 @@ Thumbs.db
 *.pdf
 css/*.css
 build/
+dist/
 app/img/icon-svg/sprite-svg.svg
